@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DeviceDataTitleView" customModule="BlueToothDemo1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="177" height="41"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJf-di-cCo">
+                    <rect key="frame" x="0.0" y="0.0" width="177" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tl9-QJ-kdB">
+                    <rect key="frame" x="0.0" y="26.5" width="177" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Tl9-QJ-kdB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5pp-Zl-R8e"/>
+                <constraint firstAttribute="trailing" secondItem="SJf-di-cCo" secondAttribute="trailing" id="Plf-hK-T0R"/>
+                <constraint firstAttribute="bottom" secondItem="Tl9-QJ-kdB" secondAttribute="bottom" id="Tat-Qg-OLq"/>
+                <constraint firstItem="SJf-di-cCo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cqj-mh-MPI"/>
+                <constraint firstItem="SJf-di-cCo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fX3-Ha-mSE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Tl9-QJ-kdB" secondAttribute="trailing" id="qg5-1O-WN0"/>
+                <constraint firstItem="SJf-di-cCo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="w0p-mY-out"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bluetoothStatusLabel" destination="Tl9-QJ-kdB" id="K3P-Cs-ONN"/>
+                <outlet property="deviceNameLabel" destination="SJf-di-cCo" id="G6B-t5-U3O"/>
+            </connections>
+            <point key="canvasLocation" x="65.94202898550725" y="305.02232142857139"/>
+        </view>
+    </objects>
+</document>
