@@ -15,6 +15,9 @@ class DevicesViewModel {
     init() {
         
         let poDevice = Device(type: .pulseOximeter)
+        poDevice.data = [OxygenData(), PulseData()]
+        
+        
         let etDevice = Device(type: .earThermometer)
         let esDevice = Device(type: .electronicScale)
         
@@ -36,6 +39,18 @@ class DevicesViewModel {
         
         cell.deviceImageView.image = device.image
         cell.deviceNameLabel.text = device.name
+        
+        if device.data.contains(where: { $0.value != nil }) {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .disclosureIndicator
+        }
+        
+        if indexPath.row == devices.count - 1 {
+            cell.bottomLine.isHidden = true
+        } else {
+            cell.bottomLine.isHidden = false
+        }
     }
     
     @objc func noDeviceButtonTapped() {

@@ -10,6 +10,7 @@ import UIKit
 
 class DeviceTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var bottomLine: UIView!
     @IBOutlet weak var deviceImageView: UIImageView!
     @IBOutlet weak var deviceNameLabel: UILabel!
     

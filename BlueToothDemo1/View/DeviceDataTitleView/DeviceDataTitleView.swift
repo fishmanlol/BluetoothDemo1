@@ -28,7 +28,7 @@ class DeviceDataTitleView: UIView {
     private func setup() {
         
         let deviceNameLabel = UILabel()
-        deviceNameLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        deviceNameLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         deviceNameLabel.textAlignment = .center
         self.deviceNameLabel = deviceNameLabel
         addSubview(deviceNameLabel)
@@ -59,7 +59,7 @@ class DeviceDataTitleView: UIView {
             make.centerX.equalToSuperview()
         }
         
-        deviceNameLabel.snp.makeConstraints { (make) in
+        deviceNameLabel.snp.remakeConstraints { (make) in
             
             make.top.equalToSuperview().offset(bluetoothStatusIndicator.isHidden ? 4 : 0)
             make.left.right.equalToSuperview()

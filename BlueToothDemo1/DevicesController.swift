@@ -22,15 +22,24 @@ class DevicesController: UITableViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
     private func setup() {
         
         title = "Deivces"
         
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor(r: 238, g: 238, b: 238)
+        
         let nib = UINib(nibName: "DeviceTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellId)
-        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "gray"), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
 
@@ -63,7 +72,7 @@ extension DevicesController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 80
     }
     
 }
@@ -77,10 +86,9 @@ extension DevicesController {
         
         let device = vm.device(at: indexPath)
         
-        let deviceDataController = DeviceDataController(device: device)
+        let deviceDataController = DeviceDataController.loadFromStoryboard(device: device)
         
         navigationController?.pushViewController(deviceDataController, animated: true)
     }
-    
 }
 

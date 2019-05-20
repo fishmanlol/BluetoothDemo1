@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,13 +14,13 @@
         <scene sceneID="Icr-Z3-8eu">
             <objects>
                 <tableViewController id="jQb-Rq-Si2" customClass="DevicesController" customModule="BlueToothDemo1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tdl-i3-Glp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="tdl-i3-Glp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" id="NUz-xg-vg4">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NUz-xg-vg4" id="FRX-WK-dLA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -36,7 +37,53 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTG-gF-RBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850.7246376811595" y="-536.38392857142856"/>
+            <point key="canvasLocation" x="1874" y="-536"/>
+        </scene>
+        <!--Device Data Controller-->
+        <scene sceneID="N4T-6c-gmm">
+            <objects>
+                <viewController storyboardIdentifier="DeviceDataController" id="ifn-dS-LU4" customClass="DeviceDataController" customModule="BlueToothDemo1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GmA-wf-rnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ybd-mi-1SF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgl-TK-srN">
+                                <rect key="frame" x="0.0" y="762" width="414" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="oH1-yx-W4b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Fetch Data"/>
+                                <connections>
+                                    <action selector="FetchDataButtonTapped:" destination="ifn-dS-LU4" eventType="touchUpInside" id="XHQ-qu-kSa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ybd-mi-1SF" firstAttribute="leading" secondItem="pKv-WJ-AUl" secondAttribute="leading" id="9GZ-N2-oWl"/>
+                            <constraint firstItem="Dgl-TK-srN" firstAttribute="leading" secondItem="pKv-WJ-AUl" secondAttribute="leading" id="ANq-q8-09h"/>
+                            <constraint firstItem="ybd-mi-1SF" firstAttribute="top" secondItem="pKv-WJ-AUl" secondAttribute="top" id="U01-D2-uFT"/>
+                            <constraint firstItem="pKv-WJ-AUl" firstAttribute="bottom" secondItem="Dgl-TK-srN" secondAttribute="bottom" constant="40" id="VLV-Rj-lUA"/>
+                            <constraint firstItem="Dgl-TK-srN" firstAttribute="top" secondItem="ybd-mi-1SF" secondAttribute="bottom" id="m4n-Wv-1z8"/>
+                            <constraint firstItem="pKv-WJ-AUl" firstAttribute="trailing" secondItem="ybd-mi-1SF" secondAttribute="trailing" id="nPR-C6-GEl"/>
+                            <constraint firstItem="pKv-WJ-AUl" firstAttribute="trailing" secondItem="Dgl-TK-srN" secondAttribute="trailing" id="ow1-t2-gxU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pKv-WJ-AUl"/>
+                    </view>
+                    <connections>
+                        <outlet property="deviceDataTableView" destination="ybd-mi-1SF" id="Ae5-B1-o0Z"/>
+                        <outlet property="fetchDataButton" destination="Dgl-TK-srN" id="Vvj-2G-hp7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deV-On-vgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2677" y="-536"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oK1-sR-3JO">

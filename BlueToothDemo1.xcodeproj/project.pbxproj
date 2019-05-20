@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102CB9992292134200CB1555 /* DeviceDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102CB9982292134200CB1555 /* DeviceDataCell.swift */; };
+		102CB99C2292374500CB1555 /* DeviceDataTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102CB99B2292374500CB1555 /* DeviceDataTableViewFooter.swift */; };
 		8E6A18A9002CB5F28678B452 /* Pods_BlueToothDemo1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C1643378AC8727EC01324D /* Pods_BlueToothDemo1.framework */; };
 		8EB7285F228F2E4D00F5C425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7285E228F2E4D00F5C425 /* AppDelegate.swift */; };
 		8EB72861228F2E4D00F5C425 /* DevicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB72860228F2E4D00F5C425 /* DevicesController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102CB9982292134200CB1555 /* DeviceDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataCell.swift; sourceTree = "<group>"; };
+		102CB99B2292374500CB1555 /* DeviceDataTableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataTableViewFooter.swift; sourceTree = "<group>"; };
 		492CF1ADD1E7FB2B63AF0D86 /* Pods-BlueToothDemo1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueToothDemo1.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlueToothDemo1/Pods-BlueToothDemo1.release.xcconfig"; sourceTree = "<group>"; };
 		8EB7285B228F2E4D00F5C425 /* BlueToothDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueToothDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB7285E228F2E4D00F5C425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102CB9972292132F00CB1555 /* DeviceDataCell */ = {
+			isa = PBXGroup;
+			children = (
+				102CB9982292134200CB1555 /* DeviceDataCell.swift */,
+			);
+			path = DeviceDataCell;
+			sourceTree = "<group>";
+		};
+		102CB99A2292370F00CB1555 /* DeviceDataTableViewFooter */ = {
+			isa = PBXGroup;
+			children = (
+				102CB99B2292374500CB1555 /* DeviceDataTableViewFooter.swift */,
+			);
+			path = DeviceDataTableViewFooter;
+			sourceTree = "<group>";
+		};
 		42682447A386B5A5B1B11B43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +164,9 @@
 		8EB72870228F3BC600F5C425 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				102CB9972292132F00CB1555 /* DeviceDataCell */,
 				8EB7289B228F70AA00F5C425 /* DeviceDataTitleView */,
+				102CB99A2292370F00CB1555 /* DeviceDataTableViewFooter */,
 				8EB7288F228F522400F5C425 /* DeviceTableViewHeader */,
 				8EB72875228F3BF100F5C425 /* DeviceTableViewCell */,
 			);
@@ -390,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102CB9992292134200CB1555 /* DeviceDataCell.swift in Sources */,
 				8EB72895228F557400F5C425 /* DeviceDataController.swift in Sources */,
 				8EB72897228F5A0400F5C425 /* OxygenData.swift in Sources */,
 				8EB72886228F494F00F5C425 /* PulseData.swift in Sources */,
@@ -397,6 +420,7 @@
 				8EB72891228F524600F5C425 /* DeviceTableViewHeader.swift in Sources */,
 				8EB7289A228F5D9200F5C425 /* DeviceDataViewModel.swift in Sources */,
 				8EB72879228F48EF00F5C425 /* DevicesViewModel.swift in Sources */,
+				102CB99C2292374500CB1555 /* DeviceDataTableViewFooter.swift in Sources */,
 				8EB72887228F494F00F5C425 /* Device.swift in Sources */,
 				8EB72861228F2E4D00F5C425 /* DevicesController.swift in Sources */,
 				8EB72873228F3BE100F5C425 /* DeviceTableViewCell.swift in Sources */,
@@ -566,7 +590,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.werur.BlueToothDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yitong/Library/Autosave Information/BlueToothDemo1/BlueToothDemo1/OC/BlueTooth-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/BlueToothDemo1/OC/BlueTooth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -591,7 +615,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.werur.BlueToothDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yitong/Library/Autosave Information/BlueToothDemo1/BlueToothDemo1/OC/BlueTooth-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/BlueToothDemo1/OC/BlueTooth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

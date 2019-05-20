@@ -55,6 +55,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bottomLine" destination="kiN-p4-oOX" id="YQr-d8-b1j"/>
                 <outlet property="deviceImageView" destination="EED-Gd-7K5" id="Jd1-Zi-s5Y"/>
                 <outlet property="deviceNameLabel" destination="Zq2-ML-chr" id="DT6-m6-wen"/>
             </connections>

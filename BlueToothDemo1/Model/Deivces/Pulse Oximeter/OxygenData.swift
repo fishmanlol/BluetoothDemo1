@@ -8,13 +8,15 @@
 
 import Foundation
 
-struct OxygenData: HealthData {
+class OxygenData: HealthData {
     
     var name: String = "oxygen"
     
     var value: Any?
     
     var time: Date?
+    
+    init() {}
     
     init(oxygen: Double) {
         self.value = oxygen
@@ -32,7 +34,9 @@ struct OxygenData: HealthData {
         let sec = Int(firstData["sec"] as? String ?? "")
         
         if let time = Date(year: year, month: month, day: day, hour: hour, min: min, sec: sec) {
-            if time.timeIntervalSinceNow < -15 {
+            if time.timeIntervalSinceNow < -3600 {
+                let userInfo: [AnyHashable: Any] = ["message": "The data is too old, please try again"]
+                NotificationCenter.default.post(name: DeviceError.dataTooOld.notificationName, object: nil, userInfo: userInfo)
                 return nil
             } else {
                 self.value = Double(firstData["Oxygen"] as? String ?? "")

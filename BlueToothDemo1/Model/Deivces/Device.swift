@@ -63,3 +63,16 @@ enum DeviceType: CaseIterable {
     case pulseOximeter, earThermometer, electronicScale
     
 }
+
+enum DeviceError {
+    case dataTooOld, otherError
+    
+    var notificationName: NSNotification.Name {
+        switch self {
+        case .dataTooOld:
+            return NSNotification.Name("dataTooOld")
+        case .otherError:
+            return NSNotification.Name("otherError")
+        }
+    }
+}

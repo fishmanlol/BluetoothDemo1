@@ -24,6 +24,8 @@ class DeviceTableViewHeader: UIView {
     
     private func setup() {
         
+        backgroundColor = .white
+        
         let button = UIButton(type: .system)
         button.setTitle("I don't have device", for: .normal)
         self.noDeviceButton = button

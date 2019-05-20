@@ -27,22 +27,11 @@ extension Date {
     
     var formattedString: String {
         
-        let now = Date()
-        let interval = Int(now.timeIntervalSince(self).rounded())
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateFormat = "MMM d, HH:mm"
         
-        switch interval {
-        case 0..<10:
-            return "Just Now"
-        case 10..<60:
-            return "Less Than Minute"
-        case 60..<3600:
-            return "\(interval/60)" + (interval/60 > 1 ? "minutes" : "minute") + "ago"
-        case 3600..<86400:
-            return "\(interval/3600)" + (interval/3660 > 1 ? "hours" : "hour") + "ago"
-        default:
-            return "\(interval/86400)" + (interval/86400 > 1 ? "days" : "day") + "ago"
-        }
-        
+        return dateFormatter.string(from: self)
     }
     
 }
